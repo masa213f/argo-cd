@@ -221,3 +221,4 @@ release-precheck: manifests
 
 .PHONY: release
 release: pre-commit release-precheck image release-cli
+

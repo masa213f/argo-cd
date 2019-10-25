@@ -54,7 +54,7 @@ func NewAccountUpdatePasswordCommand(clientOpts *argocdclient.ClientOptions) *co
 
 			if currentPassword == "" {
 				fmt.Print("*** Enter current password: ")
-				password, err := terminal.ReadPassword(syscall.Stdin)
+				password, err := terminal.ReadPassword(int(syscall.Stdin))
 				errors.CheckError(err)
 				currentPassword = string(password)
 				fmt.Print("\n")
